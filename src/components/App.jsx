@@ -17,7 +17,7 @@ const App = () => {
 				<div className="w-100" style={{ maxWidth: 400 }}>
 					<BrowserRouter>
 						<Routes>
-							<Route exact path="/" element={currentUser ? <Dashboard /> : <Navigate to="/signup" />} />
+							<Route exact path="/" element={currentUser ? <Dashboard /> : <Navigate to="/login" />} />
 							<Route path="/signup" element={<Signup />} />
 							<Route path="/login" element={<Login />} />
 							<Route path="/update-profile" element={<UpdateProfile />} />
