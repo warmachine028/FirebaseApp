@@ -6,6 +6,7 @@ import Login from "./Login"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import UpdateProfile from "./UpdateProfile"
 import ForgotPassword from "./ForgotPassword"
+import AddUsers from "./AddUsers"
 
 function App() {
 	return (
@@ -19,6 +20,7 @@ function App() {
 							<Route path="/login" element={<Login />} />
 							<Route path="/update-profile" element={<UpdateProfile />} />
 							<Route path="/forgot-password" element={<ForgotPassword />} />
+							<Route path="/add-user" element={<AddUsers />} />
 						</Routes>
 					</BrowserRouter>
 				</div>

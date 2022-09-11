@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { Card, Button, Alert } from "react-bootstrap"
 import { useAuth } from "../context/AuthContext"
 import { Link, useNavigate } from "react-router-dom"
@@ -35,6 +35,9 @@ const Dashboard = () => {
 			<div className="w-100 text-center  mt-2">
 				<Button variant="link" onClick={handleLogout}>
 					Logout
+				</Button>
+				<Button variant="link" onClick={() => navigate("/add-user")}>
+					Add Users
 				</Button>
 			</div>
 		</div>
