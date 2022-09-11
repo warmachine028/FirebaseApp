@@ -49,7 +49,7 @@ const AddUsers = () => {
 		<div>
 			<Card>
 				<Card.Body>
-					<h2 className="text-center mb-4">UPDATE PROFILE</h2>
+					<h2 className="text-center mb-4">ADD USERS</h2>
 					<Alert variant="danger" style={{ display: error ? "block" : "none" }}>
 						{error}
 					</Alert>
@@ -58,7 +58,7 @@ const AddUsers = () => {
 							{users.map(({ id, name, age }) => (
 								<div key={id} style={{ margin: 4, display: "flex", justifyContent: "space-between" }}>
 									<h5>
-										Name: {name}, Age: {age}
+										Name: {name.slice(0, 6)}, Age: {age}
 									</h5>
 									<div style={{ display: "flex", width: "38%", justifyContent: "space-between" }}>
 										<Button onClick={() => incrementAge(id, age)} variant="success">
@@ -82,8 +82,8 @@ const AddUsers = () => {
 							<Form.Label>Age</Form.Label>
 							<Form.Control type="number" ref={ageRef} placeholder="Enter Age" />
 						</Form.Group>
-						<Button type="submit" className="w-100 mt-2" disabled={loading}>
-							ADD USER
+						<Button type="submit" className="w-100 mt-2" style={{ backgroundColor: "#4527a0", border: "none" }} disabled={loading}>
+							ADD NEW USER
 						</Button>
 					</Form>
 				</Card.Body>
