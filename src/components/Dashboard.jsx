@@ -36,7 +36,7 @@ const Dashboard = () => {
 				<Button variant="link" onClick={handleLogout}>
 					Logout
 				</Button>
-				<Button variant="link" onClick={() => navigate("/add-user")}>
+				<Button variant="link" onClick={() => navigate("/add-users")}>
 					Add Users
 				</Button>
 			</div>
