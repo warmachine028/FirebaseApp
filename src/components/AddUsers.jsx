@@ -24,12 +24,12 @@ const AddUsers = () => {
 	}
 	const incrementAge = async (id, age) => {
 		const userDoc = doc(db, "users", id)
-		const fields = { age: age + 1 }
+		const fields = { age: Number(age) + 1 }
 		await updateDoc(userDoc, fields)
 	}
 	const decrementAge = async (id, age) => {
 		const userDoc = doc(db, "users", id)
-		const fields = { age: age - 1 }
+		const fields = { age: Number(age) - 1 }
 		await updateDoc(userDoc, fields)
 	}
 	const deleteUser = async id => {
@@ -61,11 +61,11 @@ const AddUsers = () => {
 										Name: {name.slice(0, 6)}, Age: {age}
 									</h5>
 									<div style={{ display: "flex", width: "38%", justifyContent: "space-between" }}>
-										<Button onClick={() => incrementAge(id, age)} variant="success">
-											<i className="bi bi-plus-lg" />
-										</Button>
 										<Button onClick={() => decrementAge(id, age)}>
 											<i className="bi bi-dash-lg" />
+										</Button>
+										<Button onClick={() => incrementAge(id, age)} variant="success">
+											<i className="bi bi-plus-lg" />
 										</Button>
 										<Button onClick={() => deleteUser(id)} variant="danger">
 											<i className="bi bi-trash3" />
