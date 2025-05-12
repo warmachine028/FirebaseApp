@@ -10,7 +10,7 @@
     "bootstrap-icons": "^1.12.1",
     "firebase": "^11.6.1",
     "react": "^19.1.0",
-    "react-bootstrap": "^2.10.9",
+    "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.5.3",
     "react-scripts": "5.0.1",
